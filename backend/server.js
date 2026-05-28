@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
+import cors from "cors";
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -17,6 +18,11 @@ connectDB();
 
 const app = express();
 const server = http.createServer(app);
+app.use(cors({
+  origin: ["https://doc-book-jade.vercel.app/"],
+  credentials: true
+}));
+app.use(express.json());
 
 // Setup Socket.io
 const allowedOrigins = process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : ['http://localhost:5173'];
