@@ -198,17 +198,6 @@ npm run dev
 
 ---
 
-# 📸 Screenshots
-
-* Home Page
-* Doctor Listing
-* Appointment Booking
-* Admin Dashboard
-* Doctor Dashboard
-
-(Add screenshots here if required)
-
----
 
 # 🔐 Authentication & Security
 
