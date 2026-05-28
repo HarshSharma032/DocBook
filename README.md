@@ -1,4 +1,4 @@
-# 🏥 DocBook — Doctor Appointment Booking Platform
+# 🏥 DocBook — Patient Appointment Booking System 
 
 > A full-stack MERN application for seamless doctor appointment booking with secure authentication, online payments, admin management, and responsive UI.
 
