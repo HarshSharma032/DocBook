@@ -21,3 +21,5 @@ router.delete('/users/:id', deleteUser);
 router.get('/appointments', getAllAppointments);
 
 module.exports = router;
+
+

@@ -90,12 +90,15 @@ const registerDoctor = async (req, res) => {
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
+    
+    // Normalize email to lowercase and trim whitespace
+    const normalizedEmail = email ? email.toLowerCase().trim() : '';
 
-    let user = await User.findOne({ email });
+    let user = await User.findOne({ email: normalizedEmail });
     let isDoctor = false;
 
     if (!user) {
-      user = await Doctor.findOne({ email });
+      user = await Doctor.findOne({ email: normalizedEmail });
       isDoctor = true;
     }
 
