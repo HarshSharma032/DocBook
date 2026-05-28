@@ -1,84 +1,66 @@
-# 🏥 DocBook — Smart Doctor Appointment Booking Platform
+# 🏥 DocBook — Doctor Appointment Booking Platform
 
-> A modern full-stack MERN application that enables patients to book doctor appointments seamlessly with secure authentication, online payments, role-based dashboards, and real-time appointment management.
+> A full-stack MERN application for seamless doctor appointment booking with secure authentication, online payments, admin management, and responsive UI.
 
 ---
 
 # 🌐 Live Demo
 
-Frontend: `https://your-frontend-link.vercel.app`
-Backend API: `https://your-backend-link.onrender.com`
+## Frontend
+
+https://doc-book-jade.vercel.app/
+
+## Backend API
+
+https://docbook-lwjv.onrender.com
 
 ---
 
-# 📸 Project Preview
+# ✨ Features Implemented
 
-Add screenshots here:
+## 👤 User Features
 
-* Home Page
-* Doctor Listing
-* Appointment Booking
-* Admin Dashboard
-* Doctor Dashboard
-
-Example:
-
-```md id="i8k9ve"
-![Home](./screenshots/home.png)
-```
-
----
-
-# ✨ Key Features
-
-## 👤 Authentication & Security
-
-* JWT-based Authentication
-* Protected Routes
-* Role-Based Access Control
-* Secure Password Handling
-
----
-
-## 🩺 Patient Features
-
+* User Registration & Login Authentication
 * Browse Available Doctors
-* Search Doctors by Specialty
-* Book Appointments Instantly
-* Online Payment Integration
-* View Booking History
-* Responsive User Dashboard
+* Book Doctor Appointments
+* Online Appointment Payments using Razorpay
+* View Booked Appointments
+* Responsive UI for Mobile & Desktop
 
 ---
 
-## 👨‍⚕️ Doctor Features
+## 🩺 Doctor Features
 
 * Doctor Dashboard
-* Manage Appointment Requests
-* Update Availability
-* Track Patient Appointments
+* View Scheduled Appointments
+* Manage Availability
+* Profile Management
 
 ---
 
 ## 🛠️ Admin Features
 
-* Admin Dashboard
-* Add / Remove Doctors
-* Manage Users
-* Monitor Bookings
-* Platform Analytics
+* Admin Authentication
+* Manage Doctors
+* View Platform Analytics
+* Appointment Monitoring
+* Dashboard Management
 
 ---
 
-## 💳 Payment Integration
+# 🚀 Additional Enhancements
 
-* Razorpay Payment Gateway
-* Secure Payment Verification
-* Real-Time Payment Status
+* Production Deployment using Vercel & Render
+* MongoDB Atlas Cloud Database
+* Cloudinary Image Upload Integration
+* Protected Routes & JWT Authentication
+* Error Handling Middleware
+* Clean Folder Structure
+* Responsive Modern UI Design
 
 ---
 
-# 🚀 Tech Stack
+# 🧰 Tech Stack Used
 
 ## Frontend
 
@@ -87,6 +69,7 @@ Example:
 * Tailwind CSS
 * Axios
 * React Router DOM
+* React Toastify
 
 ---
 
@@ -97,22 +80,22 @@ Example:
 * MongoDB
 * Mongoose
 * JWT Authentication
+* Razorpay Payment Gateway
+* Cloudinary
 
 ---
 
-## Dev Tools
+## Deployment
 
-* Git & GitHub
-* Postman
-* MongoDB Atlas
-* Render
-* Vercel
+* Vercel (Frontend)
+* Render (Backend)
+* MongoDB Atlas (Database)
 
 ---
 
-# 📂 Folder Structure
+# 📁 Project Structure
 
-```bash id="pz5lhh"
+```bash
 DocBook/
 │
 ├── frontend/
@@ -122,9 +105,10 @@ DocBook/
 │
 ├── backend/
 │   ├── controllers/
-│   ├── models/
 │   ├── routes/
+│   ├── models/
 │   ├── middleware/
+│   ├── config/
 │   └── server.js
 │
 └── README.md
@@ -136,50 +120,70 @@ DocBook/
 
 ## 1️⃣ Clone Repository
 
-```bash id="2l8n4d"
-git clone <your-repository-url>
+```bash
+git clone https://github.com/HarshSharma032/DocBook.git
 ```
 
 ---
 
 ## 2️⃣ Install Dependencies
 
-### Frontend Setup
+### Frontend
 
-```bash id="kh1c5g"
+```bash
 cd frontend
 npm install
 ```
 
-### Backend Setup
+### Backend
 
-```bash id="k4n27s"
+```bash
 cd backend
 npm install
 ```
 
 ---
 
-# 🔐 Environment Variables
+# 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder:
+## Backend `.env`
 
-```env id="nff4c9"
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
+```env
+PORT=5001
+
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+ADMIN_EMAIL=your_admin_email
+ADMIN_PASSWORD=your_admin_password
+
+CLOUDINARY_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_SECRET_KEY=your_cloudinary_secret
 
 RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
+
 CURRENCY=INR
 ```
 
 ---
 
-# ▶️ Run the Project
+## Frontend `.env`
+
+```env
+VITE_BACKEND_URL=https://docbook-lwjv.onrender.com
+```
+
+---
+
+# ▶️ Run Project Locally
 
 ## Start Backend
 
-```bash id="mq2mrv"
+```bash
+cd backend
 npm run server
 ```
 
@@ -187,68 +191,58 @@ npm run server
 
 ## Start Frontend
 
-```bash id="wz31pk"
+```bash
+cd frontend
 npm run dev
 ```
 
 ---
 
-# 📡 API Features
+# 📸 Screenshots
 
-* User Authentication APIs
-* Doctor Management APIs
-* Appointment APIs
-* Payment Verification APIs
-* Admin Management APIs
+* Home Page
+* Doctor Listing
+* Appointment Booking
+* Admin Dashboard
+* Doctor Dashboard
 
----
-
-# 🔥 Highlights
-
-✅ Fully Responsive Design
-✅ Clean UI/UX
-✅ Scalable Backend Architecture
-✅ RESTful APIs
-✅ Production-Ready MERN Stack Project
-✅ Real-Time Appointment Workflow
+(Add screenshots here if required)
 
 ---
 
-# 📌 Future Improvements
+# 🔐 Authentication & Security
 
-* 📹 Video Consultation
-* 📧 Email Notifications
-* ⭐ Doctor Reviews & Ratings
-* 🤖 AI-Based Doctor Recommendation
-* 📱 Mobile Application
-* 🔔 Push Notifications
+* JWT-based Authentication
+* Protected API Routes
+* Secure Password Handling
+* Environment Variable Protection
 
 ---
 
-# 🤝 Contributing
+# 📦 Deployment
 
-Contributions are welcome!
+## Frontend Deployment
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to branch
-5. Open Pull Request
+* Hosted on Vercel
+
+## Backend Deployment
+
+* Hosted on Render
+
+## Database
+
+* MongoDB Atlas Cloud Database
+
+---
+
+# 👨‍💻 Author
+
+Harsh Sharma
+
+* GitHub: https://github.com/HarshSharma032
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
-
----
-
-# 👨‍💻 Developer
-
-**Harsh Sharma**
-
-* MERN Stack Developer
-* Java & DSA Enthusiast
-* Passionate about building scalable web applications
-
----
+This project is developed for educational and internship assessment purposes.
