@@ -1,175 +1,254 @@
-# 🏥 CUREPOINT — Doctor Appointment Booking Platform
+# 🏥 DocBook — Smart Doctor Appointment Booking Platform
 
-> A full-stack MERN application for seamless doctor appointment booking with role-based access, payments, real-time notifications, and admin dashboard support.
-
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org)
-[![React](https://img.shields.io/badge/React-18-blue)](https://react.dev)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)](https://www.mongodb.com/cloud/atlas)
+> A modern full-stack MERN application that enables patients to book doctor appointments seamlessly with secure authentication, online payments, role-based dashboards, and real-time appointment management.
 
 ---
 
-## 📂 Folder Structure
+# 🌐 Live Demo
 
-```bash
-curepoint/
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middlewares/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── logs/
-│   ├── seeder.js
-│   ├── server.js
-│   ├── .env.example
-│   └── package.json
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── assets/
-│   │   └── App.jsx
-│   ├── .env.example
-│   ├── vite.config.js
-│   └── package.json
-│
-├── .gitignore
-└── README.md
+Frontend: `https://your-frontend-link.vercel.app`
+Backend API: `https://your-backend-link.onrender.com`
+
+---
+
+# 📸 Project Preview
+
+Add screenshots here:
+
+* Home Page
+* Doctor Listing
+* Appointment Booking
+* Admin Dashboard
+* Doctor Dashboard
+
+Example:
+
+```md id="i8k9ve"
+![Home](./screenshots/home.png)
 ```
 
 ---
 
-## 🚀 Features
+# ✨ Key Features
 
-* Patient authentication and authorization
-* Doctor registration and approval workflow
-* Doctor listing and profile pages
-* Appointment booking system
-* Appointment history dashboard
-* Admin dashboard with analytics
-* Razorpay payment integration
-* Real-time notifications using Socket.io
-* Cloudinary image upload support
-* Responsive modern UI
-* Protected routes and JWT authentication
+## 👤 Authentication & Security
+
+* JWT-based Authentication
+* Protected Routes
+* Role-Based Access Control
+* Secure Password Handling
 
 ---
 
-## 🛠 Tech Stack
+## 🩺 Patient Features
 
-### Frontend
+* Browse Available Doctors
+* Search Doctors by Specialty
+* Book Appointments Instantly
+* Online Payment Integration
+* View Booking History
+* Responsive User Dashboard
+
+---
+
+## 👨‍⚕️ Doctor Features
+
+* Doctor Dashboard
+* Manage Appointment Requests
+* Update Availability
+* Track Patient Appointments
+
+---
+
+## 🛠️ Admin Features
+
+* Admin Dashboard
+* Add / Remove Doctors
+* Manage Users
+* Monitor Bookings
+* Platform Analytics
+
+---
+
+## 💳 Payment Integration
+
+* Razorpay Payment Gateway
+* Secure Payment Verification
+* Real-Time Payment Status
+
+---
+
+# 🚀 Tech Stack
+
+## Frontend
 
 * React.js
 * Vite
 * Tailwind CSS
 * Axios
-* React Router
+* React Router DOM
 
-### Backend
+---
+
+## Backend
 
 * Node.js
 * Express.js
-* MongoDB + Mongoose
+* MongoDB
+* Mongoose
 * JWT Authentication
-* Socket.io
-* Razorpay
-* Cloudinary
-* Nodemailer
 
 ---
 
-## ⚙️ Environment Variables
+## Dev Tools
 
-### Backend `.env`
-
-```env
-NODE_ENV=development
-PORT=5000
-MONGO_URI=your_mongodb_uri
-
-JWT_SECRET=your_secret
-JWT_REFRESH_SECRET=your_refresh_secret
-
-RAZORPAY_KEY_ID=your_key
-RAZORPAY_KEY_SECRET=your_secret
-
-CLOUDINARY_CLOUD_NAME=your_name
-CLOUDINARY_API_KEY=your_key
-CLOUDINARY_API_SECRET=your_secret
-
-FRONTEND_URL=http://localhost:5173
-```
-
-### Frontend `.env`
-
-```env
-VITE_API_URL=http://localhost:5000
-VITE_RAZORPAY_KEY_ID=your_key
-```
-
----
-
-## ▶️ Run Locally
-
-### Backend
-
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Visit:
-
-```bash
-http://localhost:5173
-```
-
----
-
-## 🌍 Deployment
-
-### Backend
-
-Deploy on:
-
+* Git & GitHub
+* Postman
+* MongoDB Atlas
 * Render
-
-### Frontend
-
-Deploy on:
-
 * Vercel
 
 ---
 
-## 📈 Future Improvements
+# 📂 Folder Structure
 
-* Video consultation support
-* Appointment reminders
-* Calendar integration
-* Email notifications
-* Doctor availability management
+```bash id="pz5lhh"
+DocBook/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
+│
+└── README.md
+```
 
 ---
 
-## 💼 Resume Description
+# ⚙️ Project Setup Instructions
 
-**CUREPOINT — Doctor Appointment Booking Platform**
+## 1️⃣ Clone Repository
 
-* Developed a full-stack MERN healthcare platform with patient, doctor, and admin role-based authentication.
-* Implemented appointment booking workflow with Razorpay payment gateway integration and real-time notifications using Socket.io.
-* Built responsive dashboards, protected routes, MongoDB-based appointment management, and Cloudinary image upload support.
-* Optimized backend APIs with modular architecture, validation, and secure JWT authentication.
+```bash id="2l8n4d"
+git clone <your-repository-url>
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+### Frontend Setup
+
+```bash id="kh1c5g"
+cd frontend
+npm install
+```
+
+### Backend Setup
+
+```bash id="k4n27s"
+cd backend
+npm install
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file inside the backend folder:
+
+```env id="nff4c9"
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+CURRENCY=INR
+```
+
+---
+
+# ▶️ Run the Project
+
+## Start Backend
+
+```bash id="mq2mrv"
+npm run server
+```
+
+---
+
+## Start Frontend
+
+```bash id="wz31pk"
+npm run dev
+```
+
+---
+
+# 📡 API Features
+
+* User Authentication APIs
+* Doctor Management APIs
+* Appointment APIs
+* Payment Verification APIs
+* Admin Management APIs
+
+---
+
+# 🔥 Highlights
+
+✅ Fully Responsive Design
+✅ Clean UI/UX
+✅ Scalable Backend Architecture
+✅ RESTful APIs
+✅ Production-Ready MERN Stack Project
+✅ Real-Time Appointment Workflow
+
+---
+
+# 📌 Future Improvements
+
+* 📹 Video Consultation
+* 📧 Email Notifications
+* ⭐ Doctor Reviews & Ratings
+* 🤖 AI-Based Doctor Recommendation
+* 📱 Mobile Application
+* 🔔 Push Notifications
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to branch
+5. Open Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Developer
+
+**Harsh Sharma**
+
+* MERN Stack Developer
+* Java & DSA Enthusiast
+* Passionate about building scalable web applications
+
+---
