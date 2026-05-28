@@ -78,6 +78,10 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
+app.get("/", (req, res) => {
+  res.send("DocBook API is running successfully");
+});
+
 // Define Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
