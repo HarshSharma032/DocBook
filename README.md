@@ -1,87 +1,139 @@
-# 🩺 HealthSlot Frontend
+# 🏥 CUREPOINT — Doctor Appointment Booking Platform
 
-> Modern React-based frontend for the HealthSlot Doctor Appointment Booking Platform.
+> A full-stack MERN application for seamless doctor appointment booking with role-based access, payments, real-time notifications, and admin dashboard support.
 
-![React](https://img.shields.io/badge/React-18-blue)
-![Vite](https://img.shields.io/badge/Vite-fast-purple)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-styling-38BDF8)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
----
-
-## 📌 Overview
-
-HealthSlot Frontend is a responsive healthcare appointment booking interface built using React.js and Vite.
-It provides seamless appointment booking, authentication, dashboards, payment integration, and modern UI/UX for patients, doctors, and admins.
-
----
-
-## ✨ Features
-
-* 🔐 Authentication & Protected Routes
-* 👨‍⚕️ Doctor Listing & Profiles
-* 📅 Appointment Booking UI
-* 💳 Razorpay Payment Integration
-* 📊 Patient / Doctor / Admin Dashboards
-* 🔔 Real-time Notifications
-* 📱 Fully Responsive Design
-* ⚡ Fast Performance with Vite
-* 🎨 Modern Tailwind UI
-
----
-
-## 🛠 Tech Stack
-
-* React.js
-* Vite
-* Tailwind CSS
-* Axios
-* React Router DOM
-* Context API
-* Socket.io Client
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org)
+[![React](https://img.shields.io/badge/React-18-blue)](https://react.dev)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)](https://www.mongodb.com/cloud/atlas)
 
 ---
 
 ## 📂 Folder Structure
 
-```bash id="kqv2lm"
-frontend/
-├── public/
-│
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── context/
-│   ├── pages/
+```bash
+curepoint/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
 │   ├── routes/
-│   ├── services/
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── utils/
+│   ├── logs/
+│   ├── seeder.js
+│   ├── server.js
+│   ├── .env.example
+│   └── package.json
 │
-├── vite.config.js
-├── package.json
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── assets/
+│   │   └── App.jsx
+│   ├── .env.example
+│   ├── vite.config.js
+│   └── package.json
+│
+├── .gitignore
 └── README.md
+```
+
+---
+
+## 🚀 Features
+
+* Patient authentication and authorization
+* Doctor registration and approval workflow
+* Doctor listing and profile pages
+* Appointment booking system
+* Appointment history dashboard
+* Admin dashboard with analytics
+* Razorpay payment integration
+* Real-time notifications using Socket.io
+* Cloudinary image upload support
+* Responsive modern UI
+* Protected routes and JWT authentication
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+* React Router
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB + Mongoose
+* JWT Authentication
+* Socket.io
+* Razorpay
+* Cloudinary
+* Nodemailer
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend `.env`
+
+```env
+NODE_ENV=development
+PORT=5000
+MONGO_URI=your_mongodb_uri
+
+JWT_SECRET=your_secret
+JWT_REFRESH_SECRET=your_refresh_secret
+
+RAZORPAY_KEY_ID=your_key
+RAZORPAY_KEY_SECRET=your_secret
+
+CLOUDINARY_CLOUD_NAME=your_name
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_API_SECRET=your_secret
+
+FRONTEND_URL=http://localhost:5173
+```
+
+### Frontend `.env`
+
+```env
+VITE_API_URL=http://localhost:5000
+VITE_RAZORPAY_KEY_ID=your_key
 ```
 
 ---
 
 ## ▶️ Run Locally
 
-### 1️⃣ Install Dependencies
+### Backend
 
-```bash id="4osn7f"
+```bash
+cd backend
 npm install
-```
-
-### 2️⃣ Start Development Server
-
-```bash id="a5k86j"
 npm run dev
 ```
 
-### 3️⃣ Open Browser
+### Frontend
 
-```bash id="t1oqww"
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Visit:
+
+```bash
 http://localhost:5173
 ```
 
@@ -89,34 +141,35 @@ http://localhost:5173
 
 ## 🌍 Deployment
 
-Frontend can be deployed on:
+### Backend
+
+Deploy on:
+
+* Render
+
+### Frontend
+
+Deploy on:
 
 * Vercel
-* Netlify
 
 ---
 
 ## 📈 Future Improvements
 
-* 🌙 Dark Mode
-* 📅 Calendar Integration
-* 🔔 Push Notifications
-* 🎥 Video Consultation UI
-* 📊 Better Dashboard Analytics
+* Video consultation support
+* Appointment reminders
+* Calendar integration
+* Email notifications
+* Doctor availability management
 
 ---
 
 ## 💼 Resume Description
 
-**HealthSlot Frontend — React Healthcare Platform**
+**CUREPOINT — Doctor Appointment Booking Platform**
 
-* Developed a responsive healthcare appointment booking frontend using React.js, Vite, and Tailwind CSS.
-* Built authentication flows, booking interfaces, protected routes, and role-based dashboards.
-* Integrated REST APIs, Razorpay payment workflow, and real-time notifications using Socket.io.
-* Optimized UI performance and mobile responsiveness for better user experience.
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
+* Developed a full-stack MERN healthcare platform with patient, doctor, and admin role-based authentication.
+* Implemented appointment booking workflow with Razorpay payment gateway integration and real-time notifications using Socket.io.
+* Built responsive dashboards, protected routes, MongoDB-based appointment management, and Cloudinary image upload support.
+* Optimized backend APIs with modular architecture, validation, and secure JWT authentication.
