@@ -7,3 +7,4 @@
 {"level":"error","message":"[Razorpay] Order creation error: undefined","service":"docbook-api","timestamp":"2026-05-24 14:23:04"}
 {"level":"error","message":"[Razorpay] Order creation error: undefined","service":"docbook-api","timestamp":"2026-05-24 14:45:49"}
 {"level":"error","message":"[Razorpay] SDK Order Creation Error: undefined. Code: undefined. Description: undefined","service":"docbook-api","timestamp":"2026-05-24 14:55:02"}
+{"level":"error","message":"500 - Not Found - /favicon.ico - /favicon.ico - GET - ::1","service":"docbook-api","timestamp":"2026-05-29 11:11:14"}
