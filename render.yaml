@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: docbook-backend
+    env: node
+    region: oregon
+    branch: main
+    plan: free
+    buildCommand: 'cd backend && npm ci'
+    startCommand: 'cd backend && npm start'
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: NODE_ENV
+        value: production
