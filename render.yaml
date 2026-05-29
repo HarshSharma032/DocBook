@@ -12,3 +12,16 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+  - type: static
+    name: docbook-frontend
+    region: oregon
+    branch: main
+    plan: free
+    buildCommand: 'cd frontend && npm ci && npm run build'
+    publishCommand: 'cd frontend && npm run build && cp -r dist ../_static_frontend || true'
+    staticPublishPath: frontend/dist
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: VITE_API_URL
+        value: 'https://docbook-lwjv.onrender.com'
