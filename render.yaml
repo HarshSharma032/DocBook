@@ -13,7 +13,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: FRONTEND_URL
-        value: 'https://your-frontend-url.vercel.app'
+        value: 'https://doc-book-jade.vercel.app'
   - type: static
     name: docbook-frontend
     region: oregon
