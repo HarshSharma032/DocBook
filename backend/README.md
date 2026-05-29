@@ -39,5 +39,18 @@ Render deployment
    - `FRONTEND_URL`
    - any cloudinary/stripe/razorpay keys used by your app
 
+Vercel frontend configuration
+----------------------------
+
+1. In your Vercel project settings, set the environment variable `VITE_API_URL` to your Render backend URL, for example:
+
+   - `VITE_API_URL=https://docbook-lwjv.onrender.com`
+
+2. Ensure the frontend is deployed after adding the env var (Vercel will rebuild on new deployments).
+
+3. In Render (backend service), set `FRONTEND_URL` to your Vercel URL (for example `https://your-app.vercel.app`) so the backend's CORS allows requests from the frontend.
+
+With these two env vars set (`VITE_API_URL` on Vercel and `FRONTEND_URL` on Render) the frontend will call the correct backend and CORS will permit requests.
+
 4. After connecting the repo, Render will deploy on every push to the configured branch. If you prefer to use PM2 locally or on a VPS, follow the PM2 steps above.
 
